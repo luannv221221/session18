@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        // localStorege lưu trữ trên trình duyệt và nó sẽ lưu theo cặp key và value 
+        // localStorege nó chỉ lưu kiểu dữ liệu là string 
+        // lưu trữ vào localStorege sử dụng phương thức setItem("keyNme","Value")
+        localStorage.setItem("user", "Nguyễn THị MAI");
+        localStorage.setItem("category", "mảng danh mục");
+
+        // lấy giá trị tuwff localStorege sử dụng phương thức getItem("keyName")
+
+        var userName = localStorage.getItem("user");
+        console.log(userName);
+
+        // xóa localStorege sử dụng phương thức removeItem("keyName");
+        localStorage.removeItem("category");
+        // xóa hết localStorege 
+        localStorage.clear();
+    </script>
+</body>
+
+</html>

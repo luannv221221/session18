@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1px">
+
+        <tbody id="hung">
+
+        </tbody>
+    </table>
+    <a href="#" onclick="addRow()">ADD ROW</a>
+
+    <script>
+        // cứ 1 một hàng là 1 phần tử trong mảng 
+        var row = [];
+        // viết sự kiện click vào add row gọi đến 1 hàm addRow() thì thêm 1 phần tử vào mảng 
+        function addRow() {
+            row.push(1);
+            console.log(row);
+            render();
+        }
+
+        // viết hàm render ra tr td dựa vào mảng row 
+        function render() {
+            var _hung = document.getElementById("hung");
+
+            var _html = "";
+            for (var i = 0; i < row.length; i++) {
+                _html += ` <tr>
+                <td>cell 1 row ${i + 1}</td>
+                <td>cell 2 row ${i + 1}</td>
+                <td>cell 3 row ${i + 1}</td>
+                </tr>`
+            }
+            _hung.innerHTML = _html;
+        }
+    </script>
+</body>
+
+</html>

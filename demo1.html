@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section01 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form {
+            width: 350px;
+            background: gray;
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .table-default {
+            width: 500px;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section01">
+        <form action="" class="form">
+            <div class="form-group">
+                <label for="">Mã danh mục</label>
+                <input type="text" id="id">
+            </div>
+            <div class="form-group">
+                <label for="">Tên danh mục</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="">Trạng thái</label>
+                <input type="radio" name="status" value="1"> Hoạt động
+                <input type="radio" name="status" value="0" checked="checked"> Không hoạt động
+            </div>
+            <div class="form-group">
+                <button onclick="addCategory()" type="button">Thêm mới</button>
+            </div>
+        </form>
+    </div>
+    <section class="section2">
+        <table border="1px" class="table-default">
+            <tr>
+                <td>STT</td>
+                <td>Mã DM</td>
+                <td>Tên danh mục</td>
+                <td>Trạng thái</td>
+                <td>Hành động</td>
+            </tr>
+            <tbody id="hung">
+
+            </tbody>
+        </table>
+    </section>
+
+    <script src="demo1.js">
+    </script>
+</body>
+
+</html>
